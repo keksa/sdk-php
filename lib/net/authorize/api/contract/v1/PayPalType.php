@@ -201,12 +201,8 @@ class PayPalType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+
+        return $values;
     }
     
     // Json Set Code
